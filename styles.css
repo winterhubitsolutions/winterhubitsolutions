@@ -1,0 +1,182 @@
+/* General Styles */
+html, body {
+  height: 100%; /* Ensure the body takes the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #1e1e1e; /* Dark modern background */
+  color: #e0e0e0; /* Light text for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex; /* Create a flex container */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Main Content */
+.container {
+  flex: 1; /* Allows the main container to grow */
+}
+
+/* Header Styles */
+header {
+  background-color: #262626; /* Slightly lighter than body background */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo and Name Alignment */
+.logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns the logo and name to the left */
+  width: 100%; /* Makes the logo and name span the whole header */
+  max-width: 1200px;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #00d9ff; /* Bright neon blue for modern look */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #14ff00; /* Neon green on hover */
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 40px;
+  background-color: #2b2b2b; /* Lighter section contrast */
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00d9ff; /* Neon accent */
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between items */
+}
+
+.service-item {
+  background-color: #3a3a3a; /* Slightly lighter background for items */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 221, 255, 0.7); /* Bright hover effect */
+}
+
+.service-image {
+  width: 100%; /* Make images responsive */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures images cover the assigned height/width without distortion */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.services h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+.services p {
+  font-size: 16px;
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+/* Footer */
+footer {
+  background-color: #262626; /* Consistent with header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #444;
+  position: relative; /* Position relative to its parent */
+}
+
+.footer {
+  /* Optional: add a background color */
+  background-color: #262626;
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Add some padding */
+}
+
+/* Social Icons */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+  opacity: 0.7;
+}
+
+.whatsapp-contact {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #00d9ff; /* Match your site’s accent color */
+}
+
+.whatsapp-contact a {
+  color: #00d9ff; /* Link color */
+  text-decoration: underline; /* Underline link for clarity */
+}
+
+.whatsapp-contact a:hover {
+  color: #14ff00; /* Change color on hover for effect */
+}
