@@ -219,3 +219,17 @@ footer {
 .service-item a {
   text-decoration: none;
 }
+.hero {
+  padding: 0 20px; /* Adds padding to the left and right */
+}
+.about {
+  padding: 0 20px; /* Adds padding to the left and right */
+}
+.contact {
+  padding: 0 20px; /* Adds padding to the left and right */
+}
+/* Default Dark Mode */
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
