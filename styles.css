@@ -180,3 +180,39 @@ footer {
 .whatsapp-contact a:hover {
   color: #14ff00; /* Change color on hover for effect */
 }
+.wayne-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.wayne-photo {
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height to match the width */
+  border-radius: 50%; /* Ensures the image is round */
+  object-fit: cover; /* Ensures the image fits the container without distortion */
+  margin-right: 20px;
+}
+/* Partners Section */
+.partners {
+  text-align: center;
+  background-color: transparent; /* Remove background color */
+  padding: 50px 0;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.partners-logos img {
+  max-width: 100px;
+  max-height: 70px;
+  background-color: transparent; /* Ensure image background is transparent */
+  transition: transform 0.3s ease;
+}
+
+.partners-logos img:hover {
+  transform: scale(1.1);
+}
