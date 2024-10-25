@@ -216,3 +216,6 @@ footer {
 .partners-logos img:hover {
   transform: scale(1.1);
 }
+.service-item a {
+  text-decoration: none;
+}
