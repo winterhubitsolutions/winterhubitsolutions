@@ -13,6 +13,7 @@ html, body {
 /* Main Content */
 .container {
   flex: 1; /* Allows the main container to grow */
+  padding: 20px; /* Ensure consistent padding around main content */
 }
 
 /* Header Styles */
@@ -22,31 +23,33 @@ header {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center the nav below */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Logo and Name Alignment */
 .logo-name {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Aligns the logo and name to the left */
-  width: 100%; /* Makes the logo and name span the whole header */
-  max-width: 1200px;
+  display: flex; /* Flexbox for logo and name */
+  align-items: center; /* Center align items vertically */
+  justify-content: flex-start; /* Align to the left */
+  width: 100%; /* Make the container span the full width */
+  max-width: 1200px; /* Optional: limit max width */
+  padding: 10px 20px; /* Optional: padding around logo-name */
 }
 
 .logo {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  margin-right: 20px;
+  border-radius: 50%; /* Ensure the logo is round */
+  width: 70px; /* Adjust the logo size as needed */
+  height: 70px; /* Ensure the logo maintains aspect ratio */
+  margin-right: 10px; /* Adjust space between logo and name */
 }
 
 h1 {
   font-size: 36px;
-  margin: 0;
+  margin: 0; /* Remove default margin */
 }
 
+/* Navigation Styles */
 nav {
   margin-top: 15px;
 }
@@ -55,7 +58,7 @@ nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the navigation links */
 }
 
 nav ul li {
@@ -76,11 +79,11 @@ nav ul li a:hover {
 /* Services Section */
 .services {
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px; /* Added horizontal padding for consistent spacing */
   background-color: #2b2b2b; /* Lighter section contrast */
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  margin: 20px;
+  margin: 20px; /* Space around services section */
 }
 
 .services h2 {
@@ -102,6 +105,7 @@ nav ul li a:hover {
   text-align: left; /* Align text to the left */
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 10px; /* Adjust margin around service items */
 }
 
 .service-item:hover {
@@ -111,7 +115,8 @@ nav ul li a:hover {
 
 .service-image {
   width: 100%; /* Make images responsive */
-  height: 200px; /* Set a fixed height for all images */
+  height: auto; /* Allow the height to adjust automatically */
+  max-height: 200px; /* Limit max height to maintain a uniform look */
   object-fit: cover; /* Ensures images cover the assigned height/width without distortion */
   border-radius: 8px; /* Rounded corners */
 }
@@ -127,6 +132,32 @@ nav ul li a:hover {
   color: #e0e0e0; /* Light text for contrast */
 }
 
+/* Call to Action Section */
+.cta {
+  padding: 20px; /* Adds padding around the CTA section */
+  text-align: center; /* Center align the CTA text */
+  background-color: #2b2b2b; /* Optional: Add a background color for contrast */
+  border-radius: 12px; /* Rounded corners for the CTA */
+  margin: 20px 0; /* Space above and below the CTA */
+  color: #e0e0e0; /* Consistent text color */
+}
+
+.cta-button {
+  display: inline-block; /* Makes the link behave like a button */
+  padding: 10px 20px; /* Adds space inside the button */
+  background-color: #007BFF; /* Blue background color */
+  color: white; /* White text color */
+  font-size: 16px; /* Font size for the text */
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
 /* Footer */
 footer {
   background-color: #262626; /* Consistent with header */
@@ -135,13 +166,11 @@ footer {
   text-align: center;
   border-top: 1px solid #444;
   position: relative; /* Position relative to its parent */
-}
-
-.footer {
-  /* Optional: add a background color */
-  background-color: #262626;
-  text-align: center; /* Center the text */
-  padding: 10px 0; /* Add some padding */
+  max-height: 100px; /* Set a max height to limit expansion */
+  overflow: hidden; /* Prevents overflowing content */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Align content vertically */
+  justify-content: center; /* Center the content vertically */
 }
 
 /* Social Icons */
@@ -149,7 +178,7 @@ footer {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center social icons */
 }
 
 .social-icons li {
@@ -163,7 +192,7 @@ footer {
 }
 
 .social-icons img:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Slightly fade on hover */
 }
 
 .whatsapp-contact {
@@ -180,6 +209,8 @@ footer {
 .whatsapp-contact a:hover {
   color: #14ff00; /* Change color on hover for effect */
 }
+
+/* Profile Section */
 .wayne-profile {
   display: flex;
   align-items: center;
@@ -193,43 +224,174 @@ footer {
   object-fit: cover; /* Ensures the image fits the container without distortion */
   margin-right: 20px;
 }
+
 /* Partners Section */
 .partners {
   text-align: center;
   background-color: transparent; /* Remove background color */
-  padding: 50px 0;
+  padding: 50px 0; /* Padding for partners section */
 }
 
 .partners-logos {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: center; /* Center logos */
+  gap: 50px; /* Space between logos */
 }
 
 .partners-logos img {
-  max-width: 100px;
-  max-height: 70px;
-  background-color: transparent; /* Ensure image background is transparent */
+  max-width: 100px; /* Limit logo width */
+  max-height: 70px; /* Limit logo height */
   transition: transform 0.3s ease;
 }
 
 .partners-logos img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Scale effect on hover */
 }
+
+/* Service Item Links */
 .service-item a {
-  text-decoration: none;
+  text-decoration: none; /* Ensure links within service items have no underline */
 }
-.hero {
-  padding: 0 20px; /* Adds padding to the left and right */
-}
-.about {
-  padding: 0 20px; /* Adds padding to the left and right */
-}
-.contact {
-  padding: 0 20px; /* Adds padding to the left and right */
-}
+
 /* Default Dark Mode */
 body {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+  background-color: #1e1e1e; /* Keep dark mode consistent */
+  color: #e0e0e0; /* Maintain light text color */
 }
+
+/* Sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 0; /* Start hidden */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2b2b2b;
+  overflow-x: hidden; /* Prevent overflow */
+  transition: width 0.5s ease; /* Smooth transition for width */
+  padding-top: 60px; /* Space at the top */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* To show the sidebar */
+.sidebar.open {
+  width: 250px; /* Desired width when opened */
+}
+
+.sidebar h2 {
+  color: #00d9ff; /* Bright accent color for visibility */
+  margin-left: 20px;
+  font-size: 24px; /* Heading font size */
+  font-weight: bold; /* Bolder font */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0; /* Remove padding */
+}
+
+.sidebar ul li a {
+  padding: 15px 20px; /* Slightly larger padding for touch targets */
+  text-decoration: none;
+  font-size: 20px; /* Modern font size */
+  color: #e0e0e0; /* Light text color for contrast */
+  display: block; /* Make link block level for full clickable area */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.sidebar ul li a:hover {
+  background-color: #444; /* Lighter gray for hover effect */
+  color: #ffffff; /* Change text color on hover for contrast */
+}
+
+/* Open button */
+.open-btn {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #2b2b2b; /* Match sidebar color */
+  color: #00d9ff; /* Bright color for better visibility */
+  border: none;
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.open-btn:hover {
+  background-color: #444; /* Darker shade on hover */
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  color: #00d9ff; /* Bright color */
+  border: none;
+  background: none;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+  color: #e74c3c; /* Change color on hover for effect */
+}
+.company-name {
+  font-size: 38px; /* Set the font size to 36 pixels */
+  font-weight: bold; /* Make the text bold for emphasis */
+  color: #ffffff; /* Dark color for good contrast */
+  text-align: center; /* Center the text if necessary */
+  margin-left: 10px; /* Space between the logo and text */
+  /* Optional: Add a hover effect */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.logo-link {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set color to white */
+}
+
+.logo-link:visited {
+  color: white; /* Keep color white when clicked */
+}
+.company-name:hover {
+  color: #007BFF; /* Change color on hover for interactivity */
+}
+
+/* Default Styles Here... */
+
+/* Optional: Add some responsive behavior */
+@media (max-width: 768px) {
+  .company-name {
+      font-size: 28px; /* Decrease size on smaller screens */
+  }
+  nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: center; /* Center items */
+  }
+  nav ul li {
+      margin: 10px 0; /* Space between items */
+  }
+  .service-item {
+      margin: 0 5px; /* Adjust margin for smaller screens */
+  }
+  .container {
+      padding: 10px; /* Less padding for smaller screens */
+  }
+  h2 {
+      font-size: 28px; /* Smaller size on mobile */
+  }
+  h3 {
+      font-size: 20px; /* Smaller size on mobile */
+  }
+  p {
+      font-size: 14px; /* Smaller size on mobile */
+  }
+}
+
+/* Rest of your CSS here... */

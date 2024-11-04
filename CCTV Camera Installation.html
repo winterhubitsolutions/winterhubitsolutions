@@ -1,55 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>WinterHub IT Solutions - CCTV Camera Installation Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional CCTV camera installation services to enhance security for homes and businesses.">
+    <meta name="keywords" content="CCTV installation, security cameras, CCTV maintenance, security solutions">
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to external CSS file -->
     <link rel="icon" type="image/png" href="images/icon.png"/>
+    <title>WinterHub IT Solutions - CCTV Camera Installation Services</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-name">
-                <img src="images/logo.jpeg" alt="WinterHub IT Solutions Logo" class="logo">
-                <h1>WinterHub IT Solutions</h1>
+                <a href="index.html" class="logo-link" aria-label="WinterHub IT Solutions homepage">
+                    <img src="images/logo.jpeg" alt="WinterHub IT Solutions Logo" class="logo">
+                    <span class="company-name">WinterHub IT Solutions</span>
+                </a>
             </div>
         </div>
+        
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
+        
     </header>
+    
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">×</button>
+        <h2>Services</h2>
+        <ul>
+            <li><a href="CCTV Camera Installation.html">CCTV Installation</a></li>
+            <li><a href="Data Management Backup.html">Data Management & Backup</a></li>
+            <li><a href="IT Consultation.html">IT Consultation</a></li>
+            <li><a href="Computer and Laptop Repairs.html">Computer and Laptop Repairs</a></li>
+            <li><a href="Networking Support.html">Networking Support</a></li>
+            <li><a href="Virtual Environment Management.html">Virtual Environment Management</a></li>
+            <li><a href="VOIP Services.html">VOIP Services (FreePBX/Asterisk)</a></li>
+            <li><a href="Windows Server Management.html">Windows Server Management</a></li>
+        </ul>
+    </aside>
+    
+    <button class="open-btn" onclick="openSidebar()" title="Click to view services">
+        ☰ <span>Services</span>
+    </button>
+    
     <main class="container">
         <section id="services" class="services">
             <h2>CCTV Services Include:</h2>
             <div class="service-grid">
-                <div class="service-item">
+                <article class="service-item">
                     <img src="images/CCTV-Camera-Installation.jpg" alt="CCTV Camera Installation" class="service-image">
                     <h3>CCTV Camera Installation</h3>
                     <p>We specialize in professional CCTV camera installation to enhance security and surveillance for your home or business.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/CCTV-Configuration.jpeg" alt="CCTV Camera Setup and Configuration" class="service-image">
                     <h3>CCTV Camera Setup and Configuration</h3>
                     <p>Our technicians will set up and configure your CCTV system, ensuring it operates efficiently and meets your specific security requirements.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/Security-Camera-Maintenance.jpg" alt="Security Camera Maintenance" class="service-image">
                     <h3>Security Camera Maintenance</h3>
                     <p>Keep your CCTV system in top condition with our maintenance services, including camera cleaning and system checks.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/CCTV-Camera-Consultation.jpg" alt="CCTV Camera Consultation" class="service-image">
                     <h3>CCTV Camera Consultation</h3>
                     <p>If you're unsure about the best CCTV camera solution for your needs, we offer expert consultation services to help you make the right choice.</p>
-                </div>
+                </article>
             </div>
+            <h3>Ready to Secure Your Space?</h3>
+            <p>Contact us for professional CCTV installation and ensure your peace of mind. <a href="contact.html" class="cta-button">Get in Touch</a></p>
         </section>
     </main>
+
     <footer class="footer">
         &copy; 2024 WinterHub IT Solutions. All Rights Reserved.
     </footer>
+
+    <script src="scripts.js" defer></script> <!-- Added defer for better loading performance -->
 </body>
 </html>

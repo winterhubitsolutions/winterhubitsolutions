@@ -3,45 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WinterHub IT Solutions offers expert computer and laptop repair services, including hardware repairs, software troubleshooting, virus removal, and more.">
+    <meta name="keywords" content="Computer Repairs, Laptop Repairs, Hardware Repairs, Software Troubleshooting, Virus Removal, WinterHub IT Solutions">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" type="image/png" href="images/icon.png"/>
     <title>WinterHub IT Solutions - Computer & Laptop Repairs</title>
 </head>
 <body>
     <header>
-        <div class="logo-name">
-            <img src="images/logo.jpeg" alt="WinterHub IT Solutions Logo" class="logo">
-            <h1>WinterHub IT Solutions</h1>
+        <div class="header-container">
+            <div class="logo-name">
+                <a href="index.html" class="logo-link" aria-label="WinterHub IT Solutions homepage">
+                    <img src="images/logo.jpeg" alt="WinterHub IT Solutions Logo" class="logo">
+                    <span class="company-name">WinterHub IT Solutions</span>
+                </a>
+            </div>
         </div>
+        
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">×</button>
+        <h2>Services</h2>
+        <ul>
+            <li><a href="CCTV Camera Installation.html">CCTV Installation</a></li>
+            <li><a href="Data Management Backup.html">Data Management & Backup</a></li>
+            <li><a href="IT Consultation.html">IT Consultation</a></li>
+            <li><a href="Computer and Laptop Repairs.html">Computer and Laptop Repairs</a></li>
+            <li><a href="Networking Support.html">Networking Support</a></li>
+            <li><a href="Virtual Environment Management.html">Virtual Environment Management</a></li>
+            <li><a href="VOIP Services.html">VOIP Services (FreePBX/Asterisk)</a></li>
+            <li><a href="Windows Server Management.html">Windows Server Management</a></li>
+        </ul>
+    </aside>
+
+    <button class="open-btn" onclick="openSidebar()" title="Click to view services">
+        ☰ <span>Services</span>
+    </button>
 
     <main class="container">
         <!-- Computer Repair Services Section -->
         <section id="computer-repairs" class="services">
             <h2>Computer Repair Services Include:</h2>
             <div class="service-grid">
-                <div class="service-item">
+                <article class="service-item">
                     <img src="images/Hardware-Repairs.jpg" alt="Hardware Repairs" class="service-image">
                     <h3>Hardware Repairs</h3>
                     <p>We provide expert hardware repair services, from fixing faulty components to upgrading your computer's performance.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/Software-Troubleshooting.jpg" alt="Software Troubleshooting" class="service-image">
                     <h3>Software Troubleshooting</h3>
                     <p>Is your computer slow or plagued by software issues? Our technicians can help you resolve software problems efficiently.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/Virus-Malware-Removal.jpg" alt="Virus and Malware Removal" class="service-image">
                     <h3>Virus and Malware Removal</h3>
                     <p>If your computer is infected with viruses or malware, our team can clean your system and help prevent future infections.</p>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -49,32 +76,40 @@
         <section id="laptop-repairs" class="services">
             <h2>Laptop Repair Services Include:</h2>
             <div class="service-grid">
-                <div class="service-item">
+                <article class="service-item">
                     <img src="images/Laptop-Screen-Repair.jpg" alt="Laptop Screen Repairs" class="service-image">
                     <h3>Laptop Screen Repair</h3>
                     <p>We specialize in repairing or replacing damaged laptop screens, so you can get back to work or play without interruptions.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/Laptop-Keyboard-Replacement.jpg" alt="Laptop Keyboard Replacement" class="service-image">
                     <h3>Laptop Keyboard Replacement</h3>
                     <p>Is your laptop keyboard malfunctioning? We can replace it with a brand new keyboard, restoring your typing experience.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/Laptop-Battery-Upgrade.jpeg" alt="Laptop Battery Upgrade" class="service-image">
                     <h3>Laptop Battery Upgrade</h3>
                     <p>If your laptop's battery life has significantly decreased, we offer battery replacement and upgrade services for longer-lasting performance.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <img src="images/Laptop-Software-Troubleshooting.jpg" alt="Laptop Software Troubleshooting" class="service-image">
                     <h3>Laptop Software Troubleshooting</h3>
                     <p>Experiencing software issues on your laptop? Our technicians can diagnose and resolve various software problems efficiently.</p>
-                </div>
+                </article>
             </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta" style="padding: 20px;">
+            <h3>Ready to Optimize Your Devices?</h3>
+            <p>At WinterHub IT Solutions, we're dedicated to getting your devices back to optimal performance. <a href="contact.html" class="cta-button">Contact us today</a></p>
         </section>
     </main>
 
     <footer class="footer">
-        &copy; 2024 WinterHub IT Solutions. All Rights Reserved.
+        <p>&copy; 2024 WinterHub IT Solutions. All Rights Reserved.</p>
     </footer>
+    
+    <script src="scripts.js" defer></script> <!-- Added defer for better loading performance -->
 </body>
 </html>

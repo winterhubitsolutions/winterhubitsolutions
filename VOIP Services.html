@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive VOIP services including system setup, customization, and ongoing support to enhance your communication infrastructure.">
+    <meta name="keywords" content="VOIP services, FreePBX, Asterisk, call routing, IVR setup, communication solutions">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>WinterHub IT Solutions - VOIP Services (FreePBX/Asterisk)</title>
     <link rel="icon" type="image/png" href="images/icon.png"/>
+    <title>WinterHub IT Solutions - VOIP Services (FreePBX/Asterisk)</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-name">
-                <img src="images/logo.jpeg" alt="WinterHub IT Solutions Logo" class="logo">
-                <h1>WinterHub IT Solutions</h1>
+                <a href="index.html" class="logo-link" aria-label="WinterHub IT Solutions homepage">
+                    <img src="images/logo.jpeg" alt="WinterHub IT Solutions Logo" class="logo">
+                    <span class="company-name">WinterHub IT Solutions</span>
+                </a>
             </div>
         </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">×</button>
+        <h2>Services</h2>
+        <ul>
+            <li><a href="CCTV Camera Installation.html">CCTV Installation</a></li>
+            <li><a href="Data Management Backup.html">Data Management & Backup</a></li>
+            <li><a href="IT Consultation.html">IT Consultation</a></li>
+            <li><a href="Computer and Laptop Repairs.html">Computer and Laptop Repairs</a></li>
+            <li><a href="Networking Support.html">Networking Support</a></li>
+            <li><a href="Virtual Environment Management.html">Virtual Environment Management</a></li>
+            <li><a href="VOIP Services.html">VOIP Services (FreePBX/Asterisk)</a></li>
+            <li><a href="Windows Server Management.html">Windows Server Management</a></li>
+        </ul>
+    </aside>
+
+    <button class="open-btn" onclick="openSidebar()" title="Click to view services">
+        ☰ <span>Services</span>
+    </button>
 
     <main class="container">
         <section id="services" class="services">
             <h2>VOIP Services Include:</h2>
             <div class="service-grid">
-                <div class="service-item">
+                <article class="service-item">
                     <h3>VOIP System Setup and Configuration</h3>
                     <p>We provide comprehensive setup and configuration of VOIP systems tailored to your business needs.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <h3>FreePBX and Asterisk Customization</h3>
                     <p>Customizing FreePBX and Asterisk to optimize your communication infrastructure.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <h3>Call Routing and IVR Setup</h3>
                     <p>Efficient call routing and Interactive Voice Response (IVR) setup for improved customer interaction.</p>
-                </div>
-                <div class="service-item">
+                </article>
+                <article class="service-item">
                     <h3>Ongoing Maintenance and Support</h3>
                     <p>Providing continuous maintenance and support for your VOIP systems to ensure smooth operation.</p>
-                </div>
+                </article>
             </div>
+            <h3>Ready to Enhance Your Communication?</h3>
+            <p>Contact us for expert VOIP services and take your business communication to the next level. <a href="contact.html" class="cta-button">Get in Touch</a></p>
         </section>
 
         <!-- Partners Section -->
@@ -55,7 +83,9 @@
     </main>
 
     <footer class="footer">
-        &copy; 2024 WinterHub IT Solutions. All Rights Reserved.
+        <p>&copy; 2024 WinterHub IT Solutions. All Rights Reserved.</p>
     </footer>
+
+    <script src="scripts.js" defer></script> <!-- Added defer for better loading performance -->
 </body>
 </html>
