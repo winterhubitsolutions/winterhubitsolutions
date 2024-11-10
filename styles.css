@@ -3,18 +3,17 @@ html, body {
   height: 100%; /* Ensure the body takes the full height of the viewport */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  background-color: #1e1e1e; /* Dark modern background */
-  color: #e0e0e0; /* Light text for contrast */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex; /* Create a flex container */
   flex-direction: column; /* Stack elements vertically */
-  
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme changes */
 }
 
 /* Main Content */
 .container {
   flex: 1; /* Allows the main container to grow */
   padding: 20px; /* Ensure consistent padding around main content */
+  
 }
 
 /* Header Styles */
@@ -76,6 +75,25 @@ nav ul li a {
 nav ul li a:hover {
   color: #14ff00; /* Neon green on hover */
 }
+
+/* Services Section - Light Mode */
+.services {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Additional services-specific styles */
+.services .service-item {
+  background-color: var(--background-color-light); /* Light background for items */
+  color: var(--text-color-light); /* Light text color */
+}
+
+.services .service-item a {
+  color: var(--highlight-color-light); /* Link color for light mode */
+}
+
+/* You can add more specific styles for other parts of the services section if needed */
+
 
 /* Services Section */
 .services {
@@ -363,6 +381,413 @@ body {
   color: #007BFF; /* Change color on hover for interactivity */
 }
 
+/* Define theme colors */
+:root {
+  /* Light theme colors */
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --highlight-color-light: #4CAF50;
+  --header-background-light: #f4f4f4; /* Light mode background for header */
+  
+  /* Dark theme colors */
+  --background-color-dark: #1e1e1e;
+  --text-color-dark: #ffffff;
+  --highlight-color-dark: #3e8e41;
+  --header-background-dark: #333333;  /* Dark mode background for header */
+  
+  /* Common theme variables */
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --highlight-color: var(--highlight-color-light);
+  --header-background: var(--header-background-light);
+}
+
+/* Light Mode Theme */
+[data-theme="light"] {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --highlight-color: var(--highlight-color-light);
+  --header-background: var(--header-background-light);
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --highlight-color: var(--highlight-color-dark);
+  --header-background: var(--header-background-dark);
+}
+
+/* Apply the theme colors */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-background);
+}
+
+a {
+  color: var(--highlight-color);
+}
+
+/* Apply to services section */
+.service-grid {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.service-item {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.service-item:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Add styles for the services header */
+.services-header {
+  background-color: var(--header-background); /* This will change with the theme */
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* For the service images */
+.service-image {
+  filter: brightness(0.8);
+}
+/* Additional styles can be added here */
+
+/* Style for theme toggle button */
+.theme-toggle {
+  background-color: transparent; /* Transparent background */
+  color: #333; /* Dark color for light mode */
+  border: none; /* Removes default button border */
+  font-size: 1.5rem; /* Adjust size for visibility */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0.5em;
+  position: fixed; /* Keeps button in a visible position */
+  top: 10px; /* Adjust to your preferred position */
+  right: 10px;
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+[data-theme="dark"] .theme-toggle {
+  color: #e0e0e0; /* Light color for dark mode */
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+/* Default theme (Light Mode) */
+body[data-theme="light"] .services {
+  background-color: #f4f4f4; /* Light background for services */
+  color: #333; /* Dark text for light theme */
+}
+
+/* Light mode for service item paragraph */
+[data-theme="light"] .service-item p {
+  color: #333; /* Dark text color for light mode */
+}
+
+/* Dark theme styles */
+body[data-theme="dark"] .services {
+  background-color: #333; /* Dark background for services */
+  color: white; /* Ensure text is visible in dark mode */
+}
+
+/* Dark mode for service item paragraph */
+[data-theme="dark"] .service-item p {
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+/* Default (Light Mode) Theme */
+[data-theme="light"] .services h3 {
+  color: #000000; /* Black color for h3 in light theme */
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .services h3 {
+  color: #e0e0e0; /* Light color for h3 in dark theme */
+}
+
+/* Default (Light Mode) Theme */
+[data-theme="light"] .services h3 {
+  color: #333333; /* Modern dark gray color for h3 in light theme */
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .services h3 {
+  color: #e0e0e0; /* Light gray color for h3 in dark theme */
+}
+
+/* Update Winterhub IT Solutions name color in light mode */
+[data-theme="light"] .brand-name {
+  color: #00796b; /* Modern teal color for brand name in light theme */
+}
+
+/* Update Winterhub IT Solutions name color in dark mode */
+[data-theme="dark"] .brand-name {
+  color: #80cbc4; /* Lighter teal color for brand name in dark theme */
+}
+
+
+/* Update for service items in both themes */
+body[data-theme="light"] .service-item {
+  background-color: #fff; /* Light background for service items */
+  color: #333; /* Dark text for light theme */
+}
+
+body[data-theme="dark"] .service-item {
+  background-color: #3a3a3a; /* Dark background for service items */
+  color: white; /* Ensure text is visible in dark mode */
+}
+
+/* Hover effect for service items */
+body[data-theme="light"] .service-item:hover {
+  background-color: #e0e0e0; /* Light hover effect for light theme */
+}
+
+body[data-theme="dark"] .service-item:hover {
+  background-color: #444; /* Dark hover effect for dark theme */
+}
+
+/* Update for the service section header */
+body[data-theme="light"] .services-header {
+  background-color: #f4f4f4; /* Light background for the header */
+  color: #333; /* Dark text for the header */
+}
+
+body[data-theme="dark"] .services-header {
+  background-color: #333; /* Dark background for the header */
+  color: white; /* White text for dark mode */
+}
+/* Default styles for light theme (white mode) */
+[data-theme="light"] .open-btn {
+  background-color: white;  /* White background */
+  color: #333;  /* Dark text */
+  border: 1px solid #ccc;  /* Light border */
+}
+
+[data-theme="light"] .open-btn:hover {
+  background-color: #f0f0f0;  /* Light gray hover effect */
+}
+
+/* Styles for dark mode */
+[data-theme="dark"] .open-btn {
+  background-color: #333;  /* Dark background */
+  color: white;  /* Light text */
+  border: 1px solid #444;  /* Dark border */
+}
+
+[data-theme="dark"] .open-btn:hover {
+  background-color: #555;  /* Dark gray hover effect */
+}
+/* Sidebar Styles for Light Theme */
+[data-theme="light"] .sidebar {
+  background-color: white;  /* White background for light mode */
+  color: #333;  /* Dark text */
+  border-right: 1px solid #ccc;  /* Light border on the right */
+}
+
+[data-theme="light"] .sidebar h2,
+[data-theme="light"] .sidebar ul {
+  color: #333;  /* Dark text for headings and links */
+}
+
+[data-theme="light"] .sidebar a {
+  color: #333;  /* Dark links */
+  text-decoration: none;  /* Remove underline */
+}
+
+[data-theme="light"] .sidebar a:hover {
+  color: #007BFF;  /* Blue on hover for links */
+}
+
+[data-theme="light"] .close-btn {
+  color: #333;  /* Dark color for the close button */
+}
+
+/* Sidebar Styles for Dark Theme */
+[data-theme="dark"] .sidebar {
+  background-color: #333;  /* Dark background */
+  color: white;  /* Light text */
+  border-right: 1px solid #444;  /* Darker border for dark mode */
+}
+
+[data-theme="dark"] .sidebar h2,
+[data-theme="dark"] .sidebar ul {
+  color: white;  /* Light text for headings and links */
+}
+
+[data-theme="dark"] .sidebar a {
+  color: white;  /* Light links */
+  text-decoration: none;  /* Remove underline */
+}
+
+[data-theme="dark"] .sidebar a:hover {
+  color: #FFD700;  /* Yellow color on hover for links */
+}
+
+[data-theme="dark"] .close-btn {
+  color: white;  /* Light color for the close button */
+}
+
+/* Light Theme Styles */
+[data-theme="light"] h3, 
+[data-theme="light"] p {
+    color: #333;  /* Dark text color for light mode */
+}
+
+[data-theme="light"] .cta-button {
+    background-color: #007BFF;  /* Blue background for light mode */
+    color: white;  /* White text */
+    border: 1px solid #007BFF;  /* Blue border */
+}
+
+[data-theme="light"] .cta-button:hover {
+    background-color: #0056b3;  /* Darker blue when hovering */
+    border-color: #0056b3;  /* Matching border on hover */
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] h3, 
+[data-theme="dark"] p {
+    color: #ccc;  /* Light text color for dark mode */
+}
+
+[data-theme="dark"] .cta-button {
+    background-color: #FFD700;  /* Yellow background for dark mode */
+    color: #333;  /* Dark text */
+    border: 1px solid #FFD700;  /* Yellow border */
+}
+
+[data-theme="dark"] .cta-button:hover {
+    background-color: #ffcc00;  /* Slightly lighter yellow on hover */
+    border-color: #ffcc00;  /* Matching border on hover */
+}
+
+
+/* Default theme (dark) */
+footer {
+  background-color: #333; /* Dark background for dark theme */
+  color: #fff; /* White text for dark theme */
+}
+
+/* Light theme */
+[data-theme="light"] footer {
+  background-color: #fff; /* White background for light theme */
+  color: #000; /* Black text for light theme */
+}
+
+/* Default dark mode button styling */
+.services-btn {
+  background-color: #444; /* Dark background for dark theme */
+  color: #fff; /* White text for dark theme */
+  border: 1px solid #555; /* Dark border */
+}
+
+/* Light theme button styling */
+[data-theme="light"] .services-btn {
+  background-color: #f0f0f0; /* Light background for light theme */
+  color: #333; /* Dark text for light theme */
+  border: 1px solid #ccc; /* Light border */
+}
+/* Light Mode Styles */
+body.light-mode .footer {
+  background-color: #f8f8f8; /* Light background color */
+  color: #333; /* Dark text for readability */
+}
+
+/* Dark Mode Styles */
+body.dark-mode .footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text for readability */
+}
+
+
+body.light-mode .hero {
+  background-color: #f0f0f0;
+  color: #333333; /* Adjusted text color */
+}
+
+.theme-toggle:focus {
+  outline: 3px solid #4d90fe; /* Blue outline for focus state */
+}
+
+body.light-mode .service-item:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Default (Black) theme styles for the services section */
+#home-services {
+  background-color: #333; /* Dark background color for black theme */
+  color: #fff; /* Light text for readability */
+}
+
+#home-services h2 {
+  color: #fff; /* Ensure the heading is readable in black theme */
+}
+
+#home-services .service-item {
+  background-color: #444; /* Dark background for service items in black theme */
+  border: 1px solid #555; /* Darker border for service items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow for separation */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#home-services .service-item:hover {
+  background-color: #555; /* Darker hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+#home-services .service-image {
+  filter: brightness(0.6); /* Darken the images in the black theme */
+  transition: filter 0.3s ease;
+}
+
+#home-services .service-item:hover .service-image {
+  filter: brightness(0.8); /* Image brightens on hover */
+}
+
+/* White theme styles (applied when toggled) */
+[data-theme="light"] #home-services {
+  background-color: #f4f4f4; /* Light background color for white theme */
+  color: #333; /* Dark text for readability */
+}
+
+[data-theme="light"] #home-services h2 {
+  color: #333; /* Heading color for white theme */
+}
+
+[data-theme="light"] #home-services .service-item {
+  background-color: #ffffff; /* White background for individual service items */
+  border: 1px solid #ddd; /* Light border around service items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+[data-theme="light"] #home-services .service-item:hover {
+  background-color: #f1f1f1; /* Light hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+[data-theme="light"] #home-services .service-image {
+  filter: brightness(0.8); /* Adjust brightness of images for white theme */
+  transition: filter 0.3s ease;
+}
+
+[data-theme="light"] #home-services .service-item:hover .service-image {
+  filter: brightness(1); /* Image brightens on hover */
+}
+
+
 /* Responsive Navigation for Mobile - Side by Side */
 @media (max-width: 768px) {
   /* Keep navigation links side-by-side */
@@ -378,9 +803,10 @@ body {
     padding: 5px;
   }
   .company-name {
-      font-size: 30px; /* Adjust the font size to a smaller value */
-    }
- .service-grid {
+    font-size: 30px; /* Adjust the font size to a smaller value */
+  }
+
+  .service-grid {
     grid-template-columns: 1fr; /* Single-column layout */
     gap: 15px; /* Reduce gap between items */
   }
@@ -392,7 +818,8 @@ body {
 
   .service-image {
     height: 150px; /* Adjust image height for better mobile fit */
-    object-fit: contain; /* Scale image to fit the container */
+    width: 100%; /* Make the image responsive */
+    object-fit: cover; /* Ensure images cover the area properly */
   }
 
   .services h2 {
@@ -407,25 +834,36 @@ body {
   .services p {
     font-size: 14px; /* Smaller text for better readability */
   }
-    
+  
   .logo {
     width: 50px; /* Smaller logo size on mobile */
     height: 50px; /* Maintain aspect ratio */
+  }
+
+  /* Ensure all images are the same size on mobile */
+  img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop and fit images */
   }
 
   /* General mobile adjustments */
   .container {
     padding: 10px; /* Less padding for smaller screens */
   }
+
   h2 {
     font-size: 28px;
   }
+
   h3 {
     font-size: 20px;
   }
+
   p {
     font-size: 14px;
   }
+
   .open-btn {
     position: relative; /* Remove fixed position for better mobile display */
     top: 0; /* Reset the top position */
@@ -437,6 +875,8 @@ body {
   /* Ensure logo and navigation aren't overlapped by services button */
   .logo-name {
     margin-left: 10px; /* Adjust the logo's margin to ensure it's not blocked */
+    max-width: 1000px;
+    margin-right: 15px; /* More room between logo and name */
   }
 
   /* Mobile-specific layout for the services section button */
